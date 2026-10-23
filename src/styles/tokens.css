@@ -1,0 +1,94 @@
+/*
+ * Tokens de diseño. Base neutra fría (la cama de impresión), barra superior grafito,
+ * un solo acento azul compartido con la primera serie de las gráficas y colores de estado reservados.
+ */
+:root {
+  color-scheme: light;
+
+  --font: 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --page: #eceeeb;
+  --surface: #ffffff;
+  --surface-2: #f6f7f5;
+  --ink: #14181b;
+  --ink-2: #4f565b;
+  --muted: #6b7176;
+  --line: #e3e5e2;
+  --line-strong: #cdd1cd;
+
+  --accent: #2a78d6;
+  --accent-ink: #1f63b8;
+  --accent-wash: rgba(42, 120, 214, 0.1);
+
+  --good: #0f7a12;
+  --good-wash: rgba(12, 163, 12, 0.1);
+  --warning: #8f5a00;
+  --warning-wash: rgba(250, 178, 25, 0.18);
+  --critical: #b42323;
+  --critical-wash: rgba(208, 59, 59, 0.1);
+  --info: #1f63b8;
+  --info-wash: rgba(42, 120, 214, 0.1);
+
+  /* Barra superior: grafito en ambos modos. */
+  --rail: #1c2226;
+  --rail-ink: #eef1ef;
+  --rail-muted: #9aa3a7;
+  --rail-hover: rgba(255, 255, 255, 0.07);
+
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --radius-sm: 6px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  --focus: 0 0 0 2px var(--surface), 0 0 0 4px var(--accent);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --page: #0f1112;
+  --surface: #17191b;
+  --surface-2: #1e2123;
+  --ink: #f2f4f3;
+  --ink-2: #b9bfbd;
+  --muted: #8c9290;
+  --line: #2a2e30;
+  --line-strong: #3a3f42;
+
+  --accent: #3987e5;
+  --accent-ink: #7fb3f0;
+  --accent-wash: rgba(57, 135, 229, 0.16);
+
+  --good: #4cc24c;
+  --good-wash: rgba(12, 163, 12, 0.16);
+  --warning: #f0b23a;
+  --warning-wash: rgba(250, 178, 25, 0.14);
+  --critical: #f07a7a;
+  --critical-wash: rgba(208, 59, 59, 0.18);
+  --info: #7fb3f0;
+  --info-wash: rgba(57, 135, 229, 0.16);
+
+  --rail: #13171a;
+}
+
+/* Sin JavaScript, respeta el tema del sistema. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    color-scheme: dark;
+    --page: #0f1112;
+    --surface: #17191b;
+    --surface-2: #1e2123;
+    --ink: #f2f4f3;
+    --ink-2: #b9bfbd;
+    --muted: #8c9290;
+    --line: #2a2e30;
+    --line-strong: #3a3f42;
+    --rail: #13171a;
+  }
+}
